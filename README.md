@@ -20,4 +20,4 @@ I welcome any collaboration opportunities! If you're interested in contributing 
 
 ## Contact
 - [Email] Neuropharmgit@gmail.com
--  #      Neuropharmx@gmail.com 
+- [Email] Neuropharmx@gmail.com 
