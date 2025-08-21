@@ -1,23 +1,33 @@
-# Welcome to My GitHub Profile
+# NotumV1
 
-I'm Stanley
-Interests : Cybersecurity, Neuroscience, Personal Development, Humanitarian Technology.
+Instructions to run the project on **Ubuntu 25.04**.
 
-## About My Project
-I am working on an innovative project that explores the integration of technology to support individuals facing challenges, particularly those with psychiatric disorders, addictions, or who are highly gifted (HPI). My goal is to create a **techno-humanitarian association** that leverages technology to improve mental health and individual well-being.
+## Setup
+1. Ensure Python 3.12 and Chrome are installed.
+2. Create a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-## Towards a Techno-Humanitarian Association
-I aspire to establish a Mental Health and Technology Association, where technology serves as a tool to provide psychosocial support to those in need. The association will focus on:
--  Supporting individuals with psychiatric disorders**: Using technology to monitor, support, and improve mental health.
--  Assisting highly gifted individuals (HPI)**: Developing technological tools tailored to the specific needs of highly gifted individuals.
--  Combating addictions : Creating innovative solutions to help people overcome addictions through digital tools.
+## Backend
+Start the development server:
+```bash
+uvicorn backend.main:app --reload
+```
+The API exposes a `POST /api/save` endpoint accepting JSON `{url, content}`.
+Captured data with a SHA256 hash is appended to `captures/log.jsonl`.
 
-## Exploring Archetypes
-I am also developing theoretical archetypes, having them debate each other to explore different perspectives. This process could not only enrich my IT project but also open new pathways for the association by integrating creative and secure solutions for user protection.
+## Chrome Extension
+1. Open Chrome and navigate to `chrome://extensions`.
+2. Enable **Developer mode**.
+3. Click **Load unpacked** and select the `extension/` folder.
+4. Use the popup button "Envoyer à NotumV1" to send the current page to the backend.
 
-## Collaboration
-I welcome any collaboration opportunities! If you're interested in contributing to this project or have ideas on how we can work together, feel free to reach out.
-
-## Contact
-- [Email] Neuropharmgit@gmail.com
-- [Email] Neuropharmx@gmail.com 
+## Directories
+- `captures/` – incoming data
+- `reports/` – analysis outputs
