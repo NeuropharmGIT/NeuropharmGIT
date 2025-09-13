@@ -79,6 +79,10 @@ Ce projet vise à documenter, organiser et automatiser la création d’une clé
 
 ---
 
+## Script d'automatisation Ventoy
+
+Le script `scripts/setup-ventoy.sh` automatise l'installation de Ventoy sur la clé USB (`/dev/sda` par défaut), crée l'arborescence et ajoute un thème minimal via `ventoy.json`.
+
 ## Ressources
 
 * [Ventoy](https://ventoy.net)
